@@ -1,6 +1,6 @@
 {
-    "name": "markdown-api",
-    "version": "0.0.0",
+    "name": "mark-magic",
+    "version": "0.0.1",
     "main": "dist/markdown-api.umd.js",
     "types": "dist/types/markdown-api.d.ts",
     "scripts": {
@@ -12,8 +12,15 @@
         "commitlint": "commitlint --edit",
         "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\" \"*.{js,ts,json}\"",
         "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
-        "test": "jest"
+        "test": "jest",
+        "release": "standard-version"
     },
+    "files": [
+        "dist",
+        "node_modules",
+        "README.md",
+        "package.json"
+    ],
     "devDependencies": {
         "@commitlint/cli": "^19.1.0",
         "@commitlint/config-conventional": "^19.1.0",

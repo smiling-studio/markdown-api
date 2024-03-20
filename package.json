@@ -1,6 +1,6 @@
 {
     "name": "mark-magic",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "main": "dist/markdown-api.umd.js",
     "types": "dist/types/markdown-api.d.ts",
     "scripts": {

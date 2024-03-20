@@ -6,7 +6,7 @@ describe('image utility function', () => {
     test('creates a Markdown image', () => {
         const altText = 'OpenAI Logo';
         const imageUrl = 'https://example.com/openai-logo.png';
-        const result = image(altText, imageUrl);
+        const result = image(imageUrl, altText);
         expect(result).toBe(`![${altText}](${imageUrl})\n\n`);
     });
 });
@@ -21,14 +21,14 @@ describe('MarkdownAPI Image Methods', () => {
     test('addImage instance method', () => {
         const altText = 'Example Logo';
         const imageUrl = 'https://example.com/example-logo.png';
-        markdown.addImage(altText, imageUrl);
+        markdown.addImage(imageUrl, altText);
         expect(markdown.getMarkdown()).toBe(`![${altText}](${imageUrl})\n\n`);
     });
 
     test('addImage static method', () => {
         const altText = 'Static Image';
         const imageUrl = 'https://example.com/static-image.png';
-        const result = MarkdownAPI.AddImage(altText, imageUrl);
+        const result = MarkdownAPI.AddImage(imageUrl, altText);
         expect(result).toBe(`![${altText}](${imageUrl})\n\n`);
     });
 });

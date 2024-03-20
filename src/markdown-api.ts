@@ -112,11 +112,11 @@ export class MarkdownAPI {
     /**
      * 添加图片
      *
-     * @param altText 图片的替代文本
      * @param imageUrl 图片的URL地址
+     * @param altText 图片的替代文本
      */
-    addImage(altText: string, imageUrl: string): void {
-        this._buffer.push(image(altText, imageUrl));
+    addImage(imageUrl: string, altText: string): void {
+        this._buffer.push(image(imageUrl, altText));
     }
 
     /**
@@ -125,8 +125,8 @@ export class MarkdownAPI {
      * @param altText 图片的替代文本
      * @param imageUrl 图片的URL地址
      */
-    static AddImage(altText: string, imageUrl: string): string {
-        return image(altText, imageUrl);
+    static AddImage(imageUrl: string, altText: string): string {
+        return image(imageUrl, altText);
     }
 
     /**
